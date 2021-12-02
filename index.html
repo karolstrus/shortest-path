@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="grid.js" defer></script>
+    <script src="algorithm.js" defer></script>
+    <script src="start.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Shortest Path Finder</title>
+</head>
+<body>
+    <div class="title">Shortest Path Finder</div>
+    <div id="ctrlPress"></div>
+    <div class="containerBody"></div>
+    <div class="containerAll">
+        <div class="gridDesign">
+            <div class="slidecontainer">
+                <input type="range" min="5" max="50" value="25" class="slider" id="myRange">
+                <div class="sliderText">Grid: 5x5</div>
+            </div>
+            <div class="wallSwitch">Walls: Off</div>
+        </div>
+        <div class="buttons">
+            <button class="startButton">Start</button>
+            <button class="resetButton">Reset</button>
+        </div>
+        
+    </div>
+    <div class="instructions">Toggle Ctrl to turn on/off the wall drawing feature. Hover the mouse over the grid to draw the walls.
+        Press start to find a path of shortest length from the green dot to the red dot.
+    </div>
+</body>
+</html>

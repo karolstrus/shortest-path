@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #99E1D9;
+}
+
+.title {
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #32292F;
+}
+
+.containerAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px
+}
+
+.gridDesign {
+    display: flex;
+    align-items: center;
+}
+
+.slidecontainer {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.sliderText {
+    background-color: #F0F7F4;
+    color: #32292F;
+    border-radius: 10px;
+    border: 2px #32292F solid;
+    padding: 5px;
+    width: 100px;  
+}
+
+.wallSwitch {
+    margin-left: 20px;
+    background-color: #F0F7F4;
+    color: #32292F;
+    border-radius: 10px;
+    border: 2px #32292F solid;
+    padding: 5px;
+    width: 80px;
+}
+
+.containerBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px black solid;
+    height: 600px;
+    width: 600px;
+}
+
+.containerRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1 1 auto; 
+}
+
+.gridBox {
+    width: 50px;
+    overflow: auto;
+    /* border: 1px black solid; */
+    background-color: white;
+    flex: 1 1 auto;
+    transition: 0.3s;
+}
+
+.instructions {
+    width: 400px;
+    margin: 20px;
+    padding: 5px;
+    background-color: #F0F7F4;
+    color: #32292F;
+    border-radius: 15px;
+    border: 2px #32292F solid;
+}
+
+
