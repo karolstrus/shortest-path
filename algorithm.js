@@ -229,6 +229,7 @@ function reconstructPath(startNode, endNode, prev) {
   if (path[0] == startNode) {
     return path;
   }
+  alert("There is no path!");
   return [];
 }
 
@@ -257,6 +258,8 @@ function highlightPath(path) {
 }
 
 function startAlgorithm() {
+  const sliderVal = document.querySelector(".slider");
+  let gridSize = Number(sliderVal.value);
   let baseAdjacency = makeAdjacency(gridSize);
   let [modifiedAdjacency, startNode, endNode] = removeNodeWalls(baseAdjacency);
   let shortestPath = runBFS(modifiedAdjacency, startNode, endNode);

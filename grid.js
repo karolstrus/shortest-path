@@ -6,19 +6,7 @@ function beforeStart() {
             createListeners(toggle);
         }
     })
-    const slider = document.querySelector(".slider");
-    const sliderText = document.querySelector(".sliderText");
-
-    sliderText.textContent = 'Grid: ' + slider.value + 'x' + slider.value;
-    // slider.oninput = function() {
-    //     sliderText.textContent = 'Grid: ' + this.value + 'x' + this.value;
-    //     document.querySelectorAll('.containerRow').forEach(e => e.remove());
-    //     createGrid(this.value);
-    //     createStartRestart();
-    //     dispStartEndVert();
-    // }
-    return slider.value;
-}
+}    
 
 ///Setting up the initial grid
 
@@ -29,7 +17,7 @@ function createGrid(gridSize) {
     for (let i =0; i<gridArray.length; i++) {
         gridFrame.append(gridArray[i]);
     }
-    resetGrid(gridSize);
+    resetGrid();
 }
 
 function createRows (gridSize) {
@@ -99,10 +87,12 @@ function resetColor(elem) {
     elem.style.backgroundColor = "white";
 }
 
-function resetGrid(gridSize) {
+function resetGrid() {
+    const gridSizeDis = document.querySelector(".slider");
+    let gridSize = Number(gridSizeDis.value);
     let gridItems = document.querySelectorAll(".gridBox");
     gridItems.forEach(elem => resetColor(elem));
-    dispStartEndVert();
+    dispStartEndVert(gridSize);
 }
 
 function reshapeArray(gridArray, gridSize) {
@@ -118,7 +108,7 @@ function startEndVertices(gridArray, gridSize) {
     gridArray[gridSize-3][gridSize-3].style.backgroundColor = "red";
 }
 
-function dispStartEndVert() {
+function dispStartEndVert(gridSize) {
     let gridItems = document.querySelectorAll(".gridBox");
     let gridArray = Array.from(gridItems);
     gridArray = reshapeArray(gridArray, gridSize);
